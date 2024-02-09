@@ -64,13 +64,13 @@
     "hooks": {
       "pre-commit": "npm run lint && npm run format",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    },
+    "lint-staged": {
+      "*.+(js|jsx|ts|tsx|json|css|md)": [
+        "eslint --fix",
+        "prettier --write",
+        "git add"
+      ]
     }
-  },
-  "lint-staged": {
-    "*.+(js|jsx|ts|tsx|json|css|md)": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
   }
 }
