@@ -1,10 +1,15 @@
 import React from 'react'
-import { ButtonUsage } from './components/test'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { RegisterForm } from 'pages/form'
 
 function App() {
   return (
     <div className='App'>
-      <ButtonUsage title='Test Button' />
+      <Router>
+        <Routes>
+          <Route path='/' element={<RegisterForm />} />
+        </Routes>
+      </Router>
     </div>
   )
 }
