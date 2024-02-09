@@ -1,0 +1,3 @@
+interface IButtonUsage {
+  title: string
+}
